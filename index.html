@@ -6,35 +6,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@500&family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
-    
     <title>Safe Europe</title>
 </head>
 <body>
-    <header class="header"> 
+    <header class="header" id="header"> 
         <div class="container">
             <div class="header__inner">
-                <div class="header_logo">Безпечна Европа</div>
+                <div class="header_logo" data-scroll="#intro">Bezpieczna Europa</div>
                 
-                <nav class="nav">
-                    <a class="nav_link active" href="#">About</a>
-                    <a class="nav_link" href="#">Service</a>
-                    <a class="nav_link" href="#">Work</a>
-                    <a class="nav_link" href="#">Block</a>
-                    <a class="nav_link" href="#">Contact</a>
-                    <a class="nav_link" href="#">i</a>
-                    <a class="nav_link" href="#">i</a>
+                <nav class="nav" id="nav">
+                    <!-- <a class="nav_link" href="#">Główna</a> -->
+                    <a class="nav_link" href="#" data-scroll="#about">O Nas</a>
+                    <a class="nav_link" href="#" data-scroll="#services">Service</a>
+                    <a class="nav_link" href="#" data-scroll="#help">Pomoc</a>
+                    <a class="nav_link" href="#" data-scroll="#target">Cele</a>
+                    <a class="nav_link" href="#" data-scroll="#contact">Contact</a>
                 </nav>
+                <button class="nav-toggle" type="button" id="nav_toggle">
+                    <span class="nav_toggle_item"></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro_inner">
-                <p class="sub_title">Безпечнa Европa</p>
-                <h1 class="intro_title">Вітаємо Вас Hello All</h1>
-
-                <a class="btn" href="#">Дізнатися більше</a>
+                <p class="sub_title">Opieka prawna i opieka tłumacza dla każdego Cudzoziemca</p>
+                <h1 class="intro_title">
+                    Jesteśmy odpowiedzią na ideę demokratycznego państwa prawa
+                     i dążymy do tego, aby każdy cudzoziemiec na terytorium polski
+                      miał zAPEWNIONĄ OPIEKĘ WYKWALIFIKOWANEJ KADRY TŁUMACZY I PRAWNIKÓW.
+                </h1>
+                <a class="btn" href="#" data-scroll="#target">dowiedz się więcej</a>
             </div>
 
         </div>
@@ -42,36 +46,38 @@
             <div class="container">
                 <div class="slider_inner">
                     <div class="slider_item active">
-                        <span class="slider_num">01</span> intro
+                        <span class="slider_num">01</span> 
+                        <span class="slider_text">intro</span>
                     </div>
                     <div class="slider_item">
                         <span class="slider_num">02</span> 
-                        work
+                        <span class="slider_text">work</span>
                     </div>
                     <div class="slider_item">
                         <span class="slider_num">03</span> 
-                        abut
+                        <span class="slider_text">about</span>
                     </div>
                     <div class="slider_item">
                         <span class="slider_num">04</span> 
-                        contacts
+                        <span class="slider_text">contacts</span>
                     </div>
                 </div>
             </div>
             
         </div><!-- /.slider -->
     </div>
-    <section class="section"> 
+    <section class="section" id="about"> 
         <div class="container">
             
-            <div class="section_header">
+            <div class="section_header" >
                 <h3 class="section_subtitle">We want do</h3>
-                <h2 class="section_title">Story about us</h2>
+                <h2 class="section_title">O NAS</h2>
                 <div class="section_text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                    <p>Program „Bezpieczna Europa” jest odpowiedzią na ruchy migracyjne w obrębie Europy.
+                        Program nadzorowany przez Krajowy Fundusz Pomocy Prawnej ma na celu ewidencję 
+                        cudzoziemców przebywających na terytorium Polski, a także pomoc w sytuacjach 
+                        awaryjnych, a przede wszystkim w kontaktach z polskimi służbami i organami 
+                        państwowymi. </p>
                 </div>
             </div>
 
@@ -91,7 +97,8 @@
                 <div class="card_item">
                     <div class="card_img">
                         <img src="assets/images/phone_laptop.jpg" alt="">
-                    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</div>
                     <div class="card_text">Consulting immigrants</div>
                 </div>
             </div>
@@ -128,7 +135,23 @@
        </div>          
    </div>
 
-   <section class="section">
+   <section class="section" id="help"> 
+        <div class="container">
+            
+            <div class="section_header">
+                <h3 class="section_subtitle">We want do</h3>
+                <h2 class="section_title">W jakich instytucjach pomagamy</h2>
+                <div class="section_text">
+                    <p>Jesteśmy po to, aby pomagać Cudzoziemcom w kontaktach z funkcjonariuszami 
+                        Policji, Straży Granicznej, Urzędnikami Urzędów Wojewódzkich oraz Ratownikami 
+                        Medycznymi. Jesteśmy po to, aby pośredniczyć w kontaktach w każdej sytuacji awaryjnej jaka może spotkać Cudzoziemca na terytorium Polski. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+   <section class="section" id="services">
        <div class="container">
 
         <div class="section_header">
@@ -137,24 +160,21 @@
         </div>
 
         <div class="services">
-            <div class="services_item">
+            <div class="services_item services_item--border">
                 <img class="services_icon" src="assets/images/icons/cancel.png" alt="">
                 <div class="services_title">Надурив Роботодавець</div>
                 <div class="services_text">Помощь при невыплате средств после работы (по контракту и без)</div>
             </div>
-            <div class="services_item">
+            <div class="services_item services_item--border">
                 <img class="services_icon" src="assets/images/icons/accident.png" alt="">
                 <div class="services_title">Несчастные случаи</div>
                 <div class="services_text">Содействие в выплатах при несчастных случаях</div>
             </div>
-            <div class="services_item">
+            <div class="services_item services_item--border">
                 <img class="services_icon" src="assets/images/icons/legal_doc.png" alt="">
                 <div class="services_title">Имиграционная Помощь</div>
                 <div class="services_text">Консультации и представительство иммигрантов в сложных ситуациях</div>
             </div>
-        </div>
-    <hr/>
-        <div class="services">
             <div class="services_item">
                 <img class="services_icon" src="assets/images/icons/legal_doc.png" alt="">
                 <div class="services_title">Надурив Роботодавець</div>
@@ -174,6 +194,43 @@
 
        </div>
    </section>
+
+   <section class="section" id="target"> 
+        <div class="container">
+            
+            <div class="section_header">
+                <h3 class="section_subtitle">We want do</h3>
+                <h2 class="section_title">Cele Naszego programu</h2>
+                <div class="section_text">
+                    <p>Program ma na celu współdziałanie z polskimi służbami i pośredniczenie
+                         w kontaktach pomiędzy cudzoziemcami a organami państwa. 
+                         W Polsce Każda z czynności Funkcjonariuszy musi być zgodna
+                          z ogólną regułami, min. wyrażoną w art. 14 Ustawy o Policji. 
+                          W granicach swych zadań Funkcjonariusze wykonują czynności operacyjno-rozpoznawcze, dochodzeniowo-śledcze i administracyjno-porządkowe, ale w toku wykonywania czynności służbowych mają obowiązek respektowania godności ludzkiej oraz przestrzegania i ochrony praw człowieka.</p>
+                </div>
+            </div>
+        </div>
+   </section> 
+
+   <section class="section"> 
+    <div class="container">
+        
+        <div class="section_header">
+            <h3 class="section_subtitle">We want do</h3>
+            <h2 class="section_title">Warto pamietać</h2>
+            <div class="section_text">
+                <p>Pamiętaj ! Zatrzymanemu przysługuje prawo do obrony, 
+                    a realizacja prawa do kontaktu z adwokatem jest niezbędna 
+                    także z uwagi na to, że moment zatrzymania w większości przypadków 
+                    poprzedza późniejsze przedstawienie zatrzymanemu zarzutu popełnienia 
+                    przestępstwa. Zatrzymany potrzebuje wówczas kontaktu z osobą, 
+                    która dobrze poinformuje go o jego prawach i obowiązkach, i której 
+                    będzie mógł zaufać. Właśnie dlatego powstał program „Bezpieczna Europa”
+                </p>
+            </div>
+        </div>
+    </div>
+</section> 
    
    <section class="section">
        <div class="container">
@@ -257,7 +314,7 @@
        </div>
    </section>
 
-   <section class="section section_map">
+   <section class="section section_map" id="contact">
         <div class="container">
             <div class="map">
                 <div class="map_title">
@@ -279,11 +336,7 @@
                 <div class="footer_col footer_col_left">
                     <div class="footer_logo">Safe EU</div>
                     <div class="footer_text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised
+                        Uczestnictwo w Programie jest dobrowolne. 
                     </div>
                     <div class="footer_social">
                         <div class="footer_social_header">
@@ -337,6 +390,7 @@
    </footer>
     
     
-    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

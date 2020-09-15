@@ -23,8 +23,9 @@ hr {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Inro */
@@ -37,7 +38,10 @@ hr {
     /* background: url("../images/e_union_flag.bmp") center no-repeat; */
     background-color: #1E2051;
     -webkit-background-size: cover;
-    background-size: cover;  
+    background-size: cover; 
+    position: relative; 
+
+    min-height: 470px;
 }
 
 .intro_inner {
@@ -51,7 +55,7 @@ hr {
 .sub_title {
     color: #fff;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;  
@@ -59,7 +63,7 @@ hr {
 
 .intro_title {
     color: #fff;
-    font-size: 89px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
@@ -83,6 +87,23 @@ hr {
     right: 0;
     z-index: 1000;
     padding: 30px;
+}
+
+.header.fixed {
+    
+    background-color: #1E2051;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 2);
+
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+.header.active {
+    background-color: #313582;
 }
 
 .header__inner {
@@ -144,6 +165,81 @@ hr {
 
 .nav_link.active {
     color: white;
+}
+
+/*Nav toggle*/
+.nav-toggle {
+    width: 30px;
+    padding: 10px 0;
+    display: none;
+
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    z-index: 1;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.nav_toggle_item {
+    width: 100%;
+    height: 3px;
+    display: block;
+
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    transition: background .2s linear;
+}
+
+.nav-toggle:focus {
+    outline: none;
+}
+
+.nav_toggle_item:before,
+.nav_toggle_item:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    background-color: #fff;
+
+    transition: transform .2s linear;
+}
+
+.nav-toggle.active .nav_toggle_item {
+    background: none;
+}
+
+.nav-toggle.active .nav_toggle_item::before {
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-3px);
+}
+
+.nav-toggle.active .nav_toggle_item::after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-3px);
+}
+
+.nav_toggle_item:before {
+    top: -8px;
+}
+
+.nav_toggle_item:after {
+    bottom: -8px;
 }
 
 /* Button */
@@ -265,9 +361,10 @@ hr {
     font-size: 15px;
 }
 
-/* About */
+/* Cards */
 .card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 40px;
 }
@@ -330,6 +427,7 @@ hr {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat_item {
@@ -360,14 +458,20 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
     padding: 30px 0;
 }
 
 .services_item {
-    flex: 1 1 0;
+    width: 33.33%;
     position: relative;
-    padding-left: 70px;
-    padding-right: 20px;
+
+    margin-bottom: 30px;
+    padding: 0 20px 20px 70px;
+}
+
+.services_item--border {
+    border-bottom: 2px solid red;
 }
 
 .services_icon {
@@ -578,4 +682,171 @@ hr {
 /* Address*/
 .address_col {
     color: white;
+}
+
+@media (max-width: 1230px) {
+    /* Intro */
+    .intro_title {
+        font-size: 18px;
+    }
+
+    .sub_title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 915px) {
+    /* Intro */
+    .intro_title {
+        font-size: 16px;
+    }
+
+    .sub_title {
+        font-size: 20px;
+    }
+
+    /* Statistics*/
+    .stat {
+        justify-content: center;
+    }
+
+    .stat_item {
+        flex: none;
+        width: 33.333%;
+
+        border: 0;
+        padding: 50px 18px;
+    }
+
+    .stat_item:last-child {
+        border-right: 0;
+    }
+
+    /* Services */
+    .services_item {
+        width: 50%;
+        position: relative;
+    
+        margin-bottom: 30px;
+        padding: 0 20px 20px 70px;
+    }
+
+    .services_item--border {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Main Text*/
+    .intro_title {
+        font-size: 14px;
+    }
+
+    .sub_title {
+        font-size: 18px;
+    }
+
+    /* Header */
+    .header {
+        padding: 10px 0;
+    }
+
+    .header_logo {
+        font-size: 20px;
+    }
+
+    /* Nav */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: #1E2051;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav_link {
+        display: block;
+        margin: 0;
+        padding: 8px 10px;
+
+    }
+
+    .nav-toggle {
+        top: 18px;
+        display: block;
+    }
+
+
+
+    /* Slider */
+    .slider_text {
+        display: none;
+    }
+
+    .slider_item.active::before {
+        width: 50px;
+    }
+
+    /*Section*/
+    .section {
+        padding: 40px 0;
+    }
+
+    .section_title {
+        font-size: 24px;
+    }
+
+    .section_title::after {
+        margin: 10px auto 15px;
+    }
+
+    .section_subtitle {
+        font-size: 19px;
+    }
+    
+    /* Card */
+    .card_item {
+        width: 100%;
+        margin: 10px 0 ;
+    }
+
+    .card_text {
+        font-size: 28px;
+    }
+
+    /* Statistics*/
+    .stat_item {
+        width: 100%;
+
+        border-bottom: 1px solid #fff;
+    }
+
+    .stat_item:last-child {
+        border-bottom: 0;
+    }
+
+    .stat_text {
+        font-size: 30px;
+    }
+
+    .stat_count {
+        font-size: 120px;
+    }
+
+    /* Services */
+    .services {
+        justify-content: center;
+    }
+
+    .services_item {
+        width: 100%;
+        max-width: 400px;
+    }
+
 }
